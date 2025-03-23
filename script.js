@@ -25,14 +25,20 @@ document.addEventListener("DOMContentLoaded", function() {
 
 document.addEventListener("DOMContentLoaded", function() {
     const postBtn = document.getElementById("postBtn");
+    const audio = document.getElementById("audio");
+
     postBtn?.addEventListener("click", function() {
         const tweetText = document.getElementById("tweetInput")?.value;
         const tweetFeed = document.getElementById("tweetFeed");
         const tweetDiv = document.createElement("div");
+
         tweetDiv.className = "tweet";
         tweetDiv.innerHTML = `${tweetText} <span class='heart' style="color: black; cursor: pointer;">🖤</span>`; 
         tweetFeed.prepend(tweetDiv);
+        
         document.getElementById("tweetInput").value = "";
+
+        audio.play();
     });
 });
 
