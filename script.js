@@ -16,7 +16,7 @@ function set() {
 
     reader.onload = function(event) {
         localStorage.setItem("profilePic", event.target.result);
-        window.location.href = "feedPage.html";
+        window.location.href = "feed.html";
     };
 
     reader.readAsDataURL(file);
